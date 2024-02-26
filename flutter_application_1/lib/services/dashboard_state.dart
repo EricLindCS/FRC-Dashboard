@@ -2,7 +2,7 @@ import 'package:flutter_application_1/services/nt4.dart';
 import 'package:flutter/foundation.dart';
 
 class DashboardState {
-  static const String _robotAddress = kDebugMode ? '127.0.0.1' : '10.30.15.2';
+  static const String _robotAddress = kDebugMode ? '127.0.0.1' : '10.25.84.2';
 
   static bool _connected = false;
   static double? _matchTime;
