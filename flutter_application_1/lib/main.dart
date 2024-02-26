@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/services/dashboard_state.dart';
 import 'package:flutter_application_1/widgets/status.dart';
+import 'package:flutter_application_1/widgets/time%20elapsed.dart';
+import 'package:flutter_application_1/widgets/boolean.dart';
 
 void main() {
-
   DashboardState.init();
   runApp(const MyApp());
 }
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'NT Testing',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -32,7 +33,10 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple, brightness: Brightness.dark,),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.deepPurple,
+          brightness: Brightness.dark,
+        ),
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'NT Connection Testing'),
@@ -117,6 +121,8 @@ class _MyHomePageState extends State<MyHomePage> {
               style: Theme.of(context).textTheme.headlineMedium,
             ),
             ConnectionStatus(),
+            MatchTimer(),
+            BooleanTest(),
           ],
         ),
       ),

@@ -2,7 +2,7 @@ import 'package:flutter_application_1/services/nt4.dart';
 import 'package:flutter/foundation.dart';
 
 class DashboardState {
-  static const String _robotAddress = kDebugMode ? '127.0.0.1' : '10.25.84.2';
+  static const String _robotAddress = kDebugMode ? '10.25.84.2' : '10.25.84.2';
 
   static bool _connected = false;
   static double? _matchTime;
@@ -194,7 +194,7 @@ class DashboardState {
     );
 
     _client
-        .subscribe('/SmartDashboard/MatchTime', 1.0)
+        .subscribe('/SmartDashboard/time', 1.0)
         .listen((value) => _matchTime = value as double);
     _client
         .subscribe('/SmartDashboard/CycleTracker/LastCycleTime', 1.0)
@@ -228,8 +228,8 @@ class DashboardState {
         '/SmartDashboard/ScoringTrackerOverride', NT4TypeStr.FLOAT64);
     _cubeModeTopic =
         _client.publishNewTopic('/SmartDashboard/CubeMode', NT4TypeStr.BOOL);
-    _poleLLEnabledTopic = _client.publishNewTopic(
-        '/SmartDashboard/PoleLLEnabled', NT4TypeStr.BOOL);
+    _poleLLEnabledTopic =
+        _client.publishNewTopic('/SmartDashboard/ToggleTest', NT4TypeStr.BOOL);
     _pickupLLEnabledTopic = _client.publishNewTopic(
         '/SmartDashboard/PickupLLEnabled', NT4TypeStr.BOOL);
 
