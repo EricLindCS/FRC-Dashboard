@@ -1,0 +1,10 @@
+^C:\USERS\DOGSP\DOWNLOADS\DASHBOARD V2\FLUTTER_APPLICATION_1\BUILD\WINDOWS\X64\CMAKEFILES\CAF50A01BCB70D787C42D388850D3F02\INSTALL_FORCE.RULE
+setlocal
+cd .
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

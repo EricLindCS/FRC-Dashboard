@@ -1,0 +1,1 @@
+ C:\\Users\\dogsp\\Downloads\\dashboard\ v2\\flutter_application_1\\.dart_tool\\flutter_build\\580298490e314925512a943c58f1209f\\native_assets.yaml: 
